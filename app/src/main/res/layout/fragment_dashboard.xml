@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER IMAGE + TITLE -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"> <!-- Hauteur fixe -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_image" /> <!-- ton image ici -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Demande de position"
+                    android:textColor="#032943"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrez le numéro ci-dessous"
+                    android:textColor="#032943"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- FORM FIELD + BUTTON -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Numéro -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_phone"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#C4E1F6"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:hint="Numéro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ednum_dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnsend_dash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="24dp"
+                android:padding="15dp"
+                android:text="Send"
+                android:textColor="#E2852E"
+                android:textSize="18sp"
+                app:backgroundTint="#F8F7BA"
+                app:cornerRadius="10dp"
+                app:strokeColor="#E2852E"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

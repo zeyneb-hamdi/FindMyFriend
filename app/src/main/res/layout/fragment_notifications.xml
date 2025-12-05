@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER IMAGE + TITLE -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"> <!-- Hauteur fixe, ajustable -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_image" /> <!-- ton image ici -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                > <!-- overlay semi-transparent -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Position"
+                    android:textColor="#032943"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the details below"
+                    android:textColor="#032943"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- FORM FIELDS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Pseudo -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_person"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#C4E1F6"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:hint="Pseudo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edpseudo_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Numéro -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_phone"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#C4E1F6"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:hint="Numéro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ednum_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Longitude -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_location"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#C4E1F6"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:hint="Longitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edlong_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Latitude -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_location"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#C4E1F6"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:hint="Latitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edlat_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnadd_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="24dp"
+                android:padding="15dp"
+                android:text="Ajouter"
+                android:textColor="#E2852E"
+                android:textSize="18sp"
+                app:backgroundTint="#F8F7BA"
+                app:cornerRadius="10dp"
+                app:strokeColor="#E2852E"
+            app:strokeWidth="2dp"   />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,168 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="5dp">
+
+    <!-- Espace en haut -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Contenu principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_linear_stroke"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:orientation="vertical">
+
+        <!-- Labels + Inputs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <!-- Labels -->
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/tvLabelPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Pseudo"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLabelNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Numéro"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvLabelLongitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Longitude"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvLabelLatitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Latitude"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Inputs -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/tvpseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvLongitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvLatitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Ligne des boutons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/mainyellow"
+                android:textAllCaps="false"
+                android:textColor="#E2852E"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#5D4037" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/mainyellow"
+                android:textAllCaps="false"
+                android:textColor="#E2852E"
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#5D4037" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewOnMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/mainyellow"
+                android:textAllCaps="false"
+                android:textColor="#E2852E"
+                app:icon="@drawable/ic_location"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#5D4037" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

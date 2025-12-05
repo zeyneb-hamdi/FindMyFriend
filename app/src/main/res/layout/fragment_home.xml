@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- HEADER IMAGE + TITLE (comme le premier design) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locations List"
+                android:textColor="#032943"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/header_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the details below"
+                android:textColor="#032943"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- CONTENT (bouton + recyclerview) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Bouton Download stylé comme MaterialButton du 1er design -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btndown_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:text="Download"
+            android:textSize="18sp"
+            android:textColor="#E2852E"
+            app:backgroundTint="#F8F7BA"
+            app:cornerRadius="10dp"
+            app:strokeColor="#E2852E"
+            app:strokeWidth="2dp" />
+
+
+
+        <!-- RecyclerView (avec card padding pour ressembler au style) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp" />
+    </LinearLayout>
+</LinearLayout>

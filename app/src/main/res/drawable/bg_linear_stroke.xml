@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Couleur de fond du LinearLayout (facultatif) -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Coins arrondis -->
+    <corners android:radius="16dp" />
+
+    <!-- Contour -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/mainyellow" />
+</shape>
